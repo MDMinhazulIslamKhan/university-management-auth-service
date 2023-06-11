@@ -1,0 +1,2 @@
+Sun Jun 11 2023 7:42:22 [My university project] error: Failed to connect database, MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+Sun Jun 11 2023 7:43:4 [My university project] error: Failed to connect database, MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
