@@ -9,6 +9,15 @@
             "date": 1686454982254,
             "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-11 Jun, 2023 09-success.log",
             "hash": "d7a46e302c21f54921aa98d982de1261d7bc409f7393b3059e6f7fd9d045d544"
+=======
+            "date": 1686447506608,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-11 Jun, 2023 07-success.log",
+            "hash": "0aa7c4523a76645252b731ae19247fb4cb409e7eb5e01e96367e01d8df2c066e"
+        },
+        {
+            "date": 1686453872655,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-11 Jun, 2023 09-success.log",
+            "hash": "f9e5c2fd275a78447c3a2062010378ebb2165ae07a72680b00c2f1c6f29db0f9"
         }
     ],
     "hashType": "sha256"
