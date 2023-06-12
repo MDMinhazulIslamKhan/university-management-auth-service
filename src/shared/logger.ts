@@ -41,7 +41,7 @@ const logger = createLogger({
 const errorLogger = createLogger({
   level: 'error',
   format: combine(
-    label({ label: 'My university project' }),
+    label({ label: 'University project' }),
     timestamp(),
     myFormat
   ),
