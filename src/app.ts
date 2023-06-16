@@ -1,7 +1,8 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import { UserRouters } from './app/modules/users/user.route';
+import { UserRouters } from './app/modules/user/user.route';
 import globalErrorHandler from './app/middleware/globalErrorHandler';
+import { AcademicSemesterRouters } from './app/modules/academicSemester/academicSemester.route';
 
 const app: Application = express();
 
@@ -20,6 +21,16 @@ app.get('/', (req: Request, res: Response) => {
 
 // application routes
 app.use('/api/v1/users/', UserRouters);
+
+app.use('/api/v1/academic-semesters/', AcademicSemesterRouters);
+
+// No routes
+app.use('*', (req, res) => {
+  return res.status(404).json({
+    success: false,
+    message: 'Wrong url, there is no route in this url.',
+  });
+});
 
 app.use(globalErrorHandler);
 

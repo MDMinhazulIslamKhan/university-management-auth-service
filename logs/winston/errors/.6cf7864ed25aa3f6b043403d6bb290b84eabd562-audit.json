@@ -1,15 +1,35 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\.6cf7864ed25aa3f6b043403d6bb290b84eabd562-audit.json",
-  "files": [
-    {
-      "date": 1686596246394,
-      "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-13 Jun, 2023 00-error.log",
-      "hash": "993d79211f8e43f0005b9bd79d71fc33b9293edfe63870a232ff09fb1945bd05"
-    }
-  ],
-  "hashType": "sha256"
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\.6cf7864ed25aa3f6b043403d6bb290b84eabd562-audit.json",
+    "files": [
+        {
+            "date": 1686596246394,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-13 Jun, 2023 00-error.log",
+            "hash": "993d79211f8e43f0005b9bd79d71fc33b9293edfe63870a232ff09fb1945bd05"
+        },
+        {
+            "date": 1686637619110,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-13 Jun, 2023 12-error.log",
+            "hash": "f8af4ae329b76088430ea15a02618826079ccafb10b46361b712c990e36b6804"
+        },
+        {
+            "date": 1686639694664,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-13 Jun, 2023 13-error.log",
+            "hash": "db6673508097796e90822b52e0558c2fdced7c501276b0fb8ab293b00f55cf1a"
+        },
+        {
+            "date": 1686815604892,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-15 Jun, 2023 13-error.log",
+            "hash": "eb1439902ff56801d414a5f4ed0822ed2ae8e37e6288823f48e6831695f716f8"
+        },
+        {
+            "date": 1686816520818,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\errors\\uni-15 Jun, 2023 14-error.log",
+            "hash": "7cb078a6d45bea9663528c9028e697e7e2e3ff025f4aceb65ef35ffb2f9b7ca2"
+        }
+    ],
+    "hashType": "sha256"
 }
