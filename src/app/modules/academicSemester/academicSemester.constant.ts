@@ -31,3 +31,18 @@ export const academicSemesterMonths: Month[] = [
 
 export const academicSemesterTitles: Title[] = ['Autumn', 'Summer', 'Fall'];
 export const academicSemesterCodes: Code[] = ['01', '02', '03'];
+
+export const academicSemesterTitleCodeMapper: { [key: string]: string } = {
+  Autumn: '01',
+  Summer: '02',
+  Fall: '03',
+};
+
+export const academicSemesterSearchableField = ['title', 'code', 'year'];
+
+export const academicSemesterFilterableField = [
+  'searchTerm',
+  'title',
+  'year',
+  'code',
+];
