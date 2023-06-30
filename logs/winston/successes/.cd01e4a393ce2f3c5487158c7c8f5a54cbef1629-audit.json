@@ -94,6 +94,26 @@
             "date": 1688098280890,
             "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-30 Jun, 2023 10-success.log",
             "hash": "7680fb3dad96f81ab0696d11796c203e1fd1d06cd20a3d28a9b45ceb1c4f4234"
+        },
+        {
+            "date": 1688101210926,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-30 Jun, 2023 11-success.log",
+            "hash": "db71e6583c570e32657d41535cab9a081348db42fa0dfca91ee8367b933027a4"
+        },
+        {
+            "date": 1688105207567,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-30 Jun, 2023 12-success.log",
+            "hash": "a9dd04b17039d892c58571c549872241a638cc0708ad687e968e5cb60bcf5666"
+        },
+        {
+            "date": 1688108400177,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-30 Jun, 2023 13-success.log",
+            "hash": "892c4de9686b8748e9a6e21a5844657720ba237a1f8ad454c024b0413381d051"
+        },
+        {
+            "date": 1688116819170,
+            "name": "C:\\my-project\\1.level-2\\module 11\\university-management-auth-service\\logs\\winston\\successes\\uni-30 Jun, 2023 15-success.log",
+            "hash": "e66011246a9b13ca6209d4ece33151ded84070b050e66789756ece7e8089c676"
         }
     ],
     "hashType": "sha256"
