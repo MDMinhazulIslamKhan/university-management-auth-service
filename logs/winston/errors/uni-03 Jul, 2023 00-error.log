@@ -1,0 +1,5 @@
+Mon Jul 03 2023 0:6:42 [University project] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Mon Jul 03 2023 0:9:7 [University project] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Mon Jul 03 2023 0:10:59 [University project] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Mon Jul 03 2023 0:11:49 [University project] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Mon Jul 03 2023 0:13:2 [University project] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]

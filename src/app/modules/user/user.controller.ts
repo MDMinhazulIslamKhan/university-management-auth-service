@@ -17,6 +17,34 @@ const createStudent: RequestHandler = catchAsync(
   }
 );
 
+const createFaculty: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const { faculty, ...userData } = req.body;
+    const result = await UserService.createFaculty(faculty, userData);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result,
+      message: 'Faculty create Successfully',
+    });
+  }
+);
+
+const createAdmin: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const { admin, ...userData } = req.body;
+    const result = await UserService.createFaculty(admin, userData);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result,
+      message: 'Admin create Successfully',
+    });
+  }
+);
+
 export const UserController = {
   createStudent,
+  createFaculty,
+  createAdmin,
 };
