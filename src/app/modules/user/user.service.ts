@@ -18,6 +18,7 @@ import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
+import { ManagementDepartment } from '../managementDepartment/managementDepartment.model';
 
 const createStudent = async (
   student: IStudent,
@@ -184,14 +185,13 @@ const createAdmin = async (
   // set role
   user.role = 'admin';
 
-  // need to work here
-  // const academicManagementDepartment = await AcademicManagementDepartment.findById(
-  //   student.managementDepartment
-  // );
+  const academicManagementDepartment = await ManagementDepartment.findById(
+    admin.managementDepartment
+  );
 
-  // if (!academicManagementDepartment) {
-  //   throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid academic data.');
-  // }
+  if (!academicManagementDepartment) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid academic data.');
+  }
 
   let newAdminAllData;
   // for transaction and role back, we user session. If all section work's, then database will update neither will not update.
