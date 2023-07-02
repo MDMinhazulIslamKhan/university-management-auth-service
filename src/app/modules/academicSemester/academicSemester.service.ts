@@ -63,13 +63,14 @@ const getAllSemesters = async (
   }
 
   // if no condition is given
-  const query = andConditions.length > 0 ? { $and: andConditions } : {};
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
 
-  const result = await AcademicSemester.find(query)
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
-  const total = await AcademicSemester.countDocuments();
+  const total = await AcademicSemester.countDocuments(whereConditions);
 
   return {
     meta: {
