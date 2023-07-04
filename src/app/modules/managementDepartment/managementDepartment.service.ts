@@ -46,7 +46,7 @@ const getAllDepartments = async (
       })),
     });
   }
-  // Filters needs $and to fullfill all the conditions
+  // Filters needs $and to fullfil all the conditions
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
