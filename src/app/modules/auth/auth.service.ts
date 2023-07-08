@@ -1,8 +1,9 @@
 import httpStatus from 'http-status';
-import { Secret } from 'jsonwebtoken';
+import { JwtPayload, Secret } from 'jsonwebtoken';
 import ApiError from '../../../errors/ApiError';
 import User from '../user/user.model';
 import {
+  IChangePassword,
   ILoginUser,
   ILoginUserResponse,
   IRefreshTokenResponse,
@@ -62,7 +63,7 @@ const refreshToken = async (
     throw new ApiError(httpStatus.FORBIDDEN, 'Invalid refresh token!!!');
   }
 
-  const isUserExist = User.isUserExist(verifiedToken.id);
+  const isUserExist = await User.isUserExist(verifiedToken.id);
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, "User doesn't exist!!!");
   }
@@ -79,7 +80,56 @@ const refreshToken = async (
   };
 };
 
+const changePassword = async (
+  user: JwtPayload | null,
+  payload: IChangePassword
+): Promise<void> => {
+  const { oldPassword, newPassword } = payload;
+  // checking user
+  // const isUserExist = await User.isUserExist(user?.id);
+
+  //alternative way, here .select('+password') used because in model password select:0 and find can't give select:0 data
+  const isUserExist = await User.findOne({ id: user?.id }).select('+password');
+
+  if (!isUserExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User is not exist');
+  }
+
+  // password matching
+  const isPasswordMatch = await User.isPasswordMatch(
+    oldPassword,
+    isUserExist.password
+  );
+
+  if (!isPasswordMatch) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Old password is incorrect.');
+  }
+  /* 
+   hashed password
+  const hashedPassword = await bcrypt.hash(
+    newPassword,
+    Number(config.bcrypt_salt_rounds)
+  );
+  
+  const updatedData = {
+    password: hashedPassword,
+    needsPasswordChange: false,
+    passwordChangedAt: new Date(),
+  };
+  
+  await User.findOneAndUpdate({ id: user?.id }, updatedData);
+  */
+
+  // data update
+  isUserExist.password = newPassword;
+  isUserExist.needsPasswordChange = false;
+
+  // alternative way because mongoose pre hook is not working in update. It is only work in save and create; updating using save()
+  isUserExist.save();
+};
+
 export const AuthService = {
   loginUser,
   refreshToken,
+  changePassword,
 };

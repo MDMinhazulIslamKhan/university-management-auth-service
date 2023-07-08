@@ -2,6 +2,7 @@ import { Schema, model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
 import bcrypt from 'bcrypt';
 import config from '../../../config';
+
 /*                       for instance method                     */
 // const userSchema = new Schema<IUser, Record<string, never>, IUserMethods>(
 const userSchema = new Schema<IUser, UserModel>(
@@ -23,6 +24,9 @@ const userSchema = new Schema<IUser, UserModel>(
     needsPasswordChange: {
       type: Boolean,
       default: true,
+    },
+    passwordChangedAt: {
+      type: Date,
     },
     student: {
       type: Schema.Types.ObjectId,
@@ -85,12 +89,17 @@ userSchema.statics.isPasswordMatch = async function (
   return await bcrypt.compare(givenPassword, savePassword);
 };
 
+// save pre hook works only for save or create
 userSchema.pre('save', async function (next) {
   // hashing password
   this.password = await bcrypt.hash(
     this.password,
     Number(config.bcrypt_salt_rounds)
   );
+
+  if (!this.needsPasswordChange) {
+    this.passwordChangedAt = new Date();
+  }
   next();
 });
 
